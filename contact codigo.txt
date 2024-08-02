@@ -1,0 +1,136 @@
+<div class="contact">
+        <h1>Contatos</h1>
+        <div class="contact-content">
+            <div class="contact-items">
+                <div class="contact-item">
+                    <a href="tel:+5512981000000">
+                        <img src="./src/css/img/telwhapp1.png" alt="Telefone">
+                    </a>
+                    <p><a href="tel:+5512981000000">(12) 98100-0000</a></p>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/dmd7engenharia" target="_blank">
+                        <img src="./src/css/img/instagram1.png" alt="Instagram">
+                    </a>
+                    <p><a href="https://www.instagram.com/dmd7engenharia" target="_blank">DMD7 Engenharia Elétrica</a></p>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:contato@dmd7.com.br">
+                        <img src="./src/css/img/email1.png" alt="Email">
+                    </a>
+                    <p><a href="mailto:contato@dmd7.com.br">contato@dmd7.com.br</a></p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14668.654054042838!2d-45.8922153!3d-23.2007109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a6e8144b717%3A0xc2cc0db732576017!2sPark%20Santos%20Dumont!5e0!3m2!1sen!2sbr!4v1722529046017!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+CSS
+
+
+
+/* Estilo para a div contact */
+.contact {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.contact h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact .p {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-content {
+    display: flex; /* Alinha os itens horizontalmente em telas grandes */
+    gap: 20px; /* Espaçamento entre a lista de contatos e o mapa */
+    flex-wrap: wrap; /* Permite que o mapa e a lista se movam para novas linhas se necessário */
+}
+
+.contact-items {
+    flex: 1; /* Faz com que a lista de contatos ocupe o máximo de espaço possível */
+    display: flex;
+    flex-direction: column; /* Alinha os itens de contato verticalmente */
+    gap: 10px; /* Espaçamento entre os itens de contato */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
+    gap: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.contact img {
+    width: 25px; /* Define a largura das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.contact-map {
+    flex: 1; /* Faz com que o mapa ocupe o máximo de espaço possível */
+    max-width: 600px; /* Define uma largura máxima para o mapa em telas grandes */
+    margin-right: 100px;
+}
+
+.contact iframe {
+    width: 100%; /* Faz o iframe se ajustar ao tamanho da div */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    border: 0; /* Remove a borda do iframe */
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .contact-map {
+        max-width: 100%; /* Faz o mapa ocupar a largura total disponível */
+        margin: 10px; /* Adiciona uma margem leve em torno do mapa */
+    }
+
+    .contact-content {
+        flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
+    }
+
+    .contact-map iframe {
+        height: 300px; /* Ajusta a altura do iframe em telas pequenas */
+    }
+}
+
+/* Margem esquerda para contact-items em telas maiores que 600px */
+@media (min-width: 601px) {
+    .contact-items {
+        margin-left: 150px;
+    }
+}
+
+
+/* end contato */
+
+
+
+/* Botão de contato */
+.contact-button {
+    display: inline-block;
+    background-color: #ffc400; /* Cor laranja */
+    color: white;
+    padding: 16px 30px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #e59400; /* Cor laranja mais escura ao passar o mouse */
+}
